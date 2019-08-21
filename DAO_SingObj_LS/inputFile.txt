@@ -1,0 +1,50 @@
+%This File contains the input parameters for the DAO_SingObj_LS algorithm
+%Comments MUST start with '%\t' otherwise the line will be read by the program as an input parameter
+%Empty lines are NOT allowed. Parameters must be separated by a '\t' character
+%
+%
+%Firstly the number of Organs and Angles is read
+3   5
+%
+%Names of Organs, Index (an autoIncr integer number), VoxelInit (default 0), VoxelEnd(default 0), totalDose, ActualMinDose, actualMaxDose, DoseUB, DoseLB, a, v (for Wu et al. formula), totalVoxels, isTarget (boolean). For CERR example, we use PTVHD, Rectum and Bladder. For TRT001 we use LECHOPROST, RECTO and VEJIGA. 
+PTVHD  0   0   0   0   0   0   80  70  70  -10 12  0   true
+RECTUM   1   0   0   0   0   0   65  0   55  8   8   0   false
+BLADDER  2   0   0   0   0   0   65  0   50  2   5   0   false
+%
+%PathFile, the path to the case data files 
+C:\Users\moyan\Desktop\imrt_DAO\CERR_Prostate\
+%../CERR_Prostate/
+%../TRT001/
+%
+%Option, objectiveFuntion to be used. 1 means CuadraticError
+1
+%Selection Criterion: 0 = 'First-Improvement' LS, 1 = best-Improvement LS, 2 = ParetoLocal Search
+0
+%
+%max iterations LS, number of sequential LS.  In case no enough computational resources are available, 'iterations' can be bigger so local optima would be generated sequentially. This would take longer though. 
+5
+%
+%max time LS, time of sequential LS (measured in seconds). 
+100
+%
+%Vx Index per organ. First column corresponds to organ index. Only one row per organ (usually only for target regions)
+0   95  100 113
+%
+%Dx Index per organ. First column corresponds to organ index. Only one row per organ (usually only for OAR regions)
+1   50  30  5
+2   50  30  5
+%
+%Initial BAC. It must be a list of BACs, equal to the number of initial BACs times the number of iterations.
+0 70  140  210 280
+%Initial Value intensity (insert a number)
+2
+%
+%Maximum intensity for apertures (insert a number)
+20
+%
+%Maximum delta for variation intensity of apertures(not used in this version)
+2
+%
+%Step size for aperture intensity(not used in this version)
+2
+%

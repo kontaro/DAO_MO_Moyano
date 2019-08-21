@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="DAO_SingObj_LS"/>
+	<classpathentry kind="src" path="IMRT_Base/src"/>
+	<classpathentry kind="lib" path="IMRT_Base/dist/IMRT_Base.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/gurobi811/win64/lib/gurobi.jar"/>
+	<classpathentry kind="lib" path="C:/gurobi811/win64/lib/gurobi-javadoc.jar"/>
+	<classpathentry kind="output" path="IMRT_Base/build/classes"/>
+</classpath>
